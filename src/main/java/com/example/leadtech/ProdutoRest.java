@@ -1,5 +1,7 @@
 package com.example.leadtech;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,4 +53,23 @@ public class ProdutoRest {
 		produtoService.excluirProduto(id);
 		return ResponseEntity.noContent().build();
 	}
+	
+	@GetMapping("/")
+    public ResponseEntity<List<ProdutoDTO>> getAllProdutos() {
+        List<ProdutoDTO> produtos = produtoService.getAllProdutos();
+        return ResponseEntity.ok(produtos);
+    }
+	
+	@GetMapping("/categoria/{categoria}")
+	public ResponseEntity<List<ProdutoDTO>> getProdutosByCategoria(@PathVariable String categoria) {
+	    List<ProdutoDTO> produtos = produtoService.getProdutosByCategoria(categoria);
+	    return ResponseEntity.ok(produtos);
+	}
+
+	@GetMapping("/estrelas/{estrelas}")
+	public ResponseEntity<List<ProdutoDTO>> getProdutosByEstrelas(@PathVariable int estrelas) {
+	    List<ProdutoDTO> produtos = produtoService.getProdutosByEstrelas(estrelas);
+	    return ResponseEntity.ok(produtos);
+	}
+
 }

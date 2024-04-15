@@ -1,7 +1,11 @@
 package com.example.leadtech;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.example.leadtech.exception.ResourceNotFoundException;
 
 
@@ -54,6 +58,27 @@ public class ProdutoService {
         }
         // Excluir o produto do banco de dados
         produtoRepository.deleteById(id);
+    }
+    
+    public List<ProdutoDTO> getProdutosByCategoria(String categoria) {
+        List<Produto> produtos = produtoRepository.findByCategoriaProduto(categoria);
+        return produtos.stream()
+                       .map(this::mapToDTO)
+                       .collect(Collectors.toList());
+    }
+
+    public List<ProdutoDTO> getProdutosByEstrelas(int estrelas) {
+        List<Produto> produtos = produtoRepository.findByEstrelas(estrelas);
+        return produtos.stream()
+                       .map(this::mapToDTO)
+                       .collect(Collectors.toList());
+    }
+    
+    public List<ProdutoDTO> getAllProdutos() {
+        List<Produto> produtos = produtoRepository.findAll();
+        return produtos.stream()
+                       .map(this::mapToDTO)
+                       .collect(Collectors.toList());
     }
 
     // Métodos auxiliares para mapear entre DTO e entidade

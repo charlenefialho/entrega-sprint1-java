@@ -3,6 +3,7 @@ package com.example.leadtech;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,9 +18,12 @@ import lombok.Data;
 public class Fornecedor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idFornecedor")
 	private Long idFornecedor;
-
+	
+	@Column(name = "nomeFornecedor")
 	private String nomeFornecedor;
+	@Column(name = "tipoFornecedor")
 	private String tipoFornecedor;
 
 	@OneToMany(mappedBy = "fornecedor", cascade = CascadeType.ALL)

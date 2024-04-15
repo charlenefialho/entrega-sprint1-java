@@ -16,23 +16,6 @@ import lombok.Data;
 @Entity
 @Table(name = "Produto")
 public class Produto {
-	public Produto() {
-		
-	}
-	
-	
-	public Produto(Long idProduto, String nomeProduto, int estrelas, String categoriaProduto, int qtdEstoque,
-			Date dataCompraProduto, double valorProduto, Fornecedor fornecedor) {
-		super();
-		this.idProduto = idProduto;
-		this.nomeProduto = nomeProduto;
-		this.estrelas = estrelas;
-		this.categoriaProduto = categoriaProduto;
-		this.qtdEstoque = qtdEstoque;
-		this.dataCompraProduto = dataCompraProduto;
-		this.valorProduto = valorProduto;
-		this.fornecedor = fornecedor;
-	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,6 +40,23 @@ public class Produto {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idFornecedor")
 	private Fornecedor fornecedor;
+
+	public Produto() {
+
+	}
+
+	public Produto(Long idProduto, String nomeProduto, int estrelas, String categoriaProduto, int qtdEstoque,
+			Date dataCompraProduto, double valorProduto, Fornecedor fornecedor) {
+		super();
+		this.idProduto = idProduto;
+		this.nomeProduto = nomeProduto;
+		this.estrelas = estrelas;
+		this.categoriaProduto = categoriaProduto;
+		this.qtdEstoque = qtdEstoque;
+		this.dataCompraProduto = dataCompraProduto;
+		this.valorProduto = valorProduto;
+		this.fornecedor = fornecedor;
+	}
 
 	public Long getIdProduto() {
 		return idProduto;
@@ -121,6 +121,5 @@ public class Produto {
 	public void setFornecedor(Fornecedor fornecedor) {
 		this.fornecedor = fornecedor;
 	}
-	
-	
+
 }
