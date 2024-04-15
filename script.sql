@@ -1,5 +1,5 @@
-drop table lead cascade constraints;
-drop table Cliente_Produto cascade constraints;
+drop table Lead cascade constraints;
+drop table Cliente cascade constraints;
 drop table Produto cascade constraints;
 drop table Fornecedor cascade constraints;
 drop table LocalizacaoGeografica cascade constraints;
@@ -85,3 +85,9 @@ INSERT INTO LocalizacaoGeografica (idLocalizacao, pais, estado, cidade, cep)
 VALUES (201, 'Brasil', 'São Paulo', 'São Paulo', '01000-000');
 INSERT INTO LocalizacaoGeografica (idLocalizacao, pais, estado, cidade, cep)
 VALUES (202, 'Brasil', 'Rio de Janeiro', 'Rio de Janeiro', '20000-000');
+
+select * from Lead;
+select * from Cliente;
+select * from Produto;
+select * from Fornecedor;
+select * from LocalizacaoGeografica;
