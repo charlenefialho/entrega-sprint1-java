@@ -15,9 +15,9 @@ Aqui estão os diagramas do projeto:
 ![Diagrama de Arquitetura](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/DiagramaDeClasses.png)
 
 ### Diagrama de MER/DER
-![Diagrama Conceitual](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/modelo_conceitual.png)
+![Diagrama Conceitual](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/diagramaconceitual.png)
 
-![Diagrama lógico](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/diagramalogico2.png)
+![Diagrama lógico](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/diagramaLogico.png)
 
 ## Proposta Tecnológica e Problemas a serem Resolvidos
 
