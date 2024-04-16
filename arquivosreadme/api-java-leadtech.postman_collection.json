@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "46c26a2e-d4ff-4042-b667-e4b21d912637",
+		"name": "api-java-leadtech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19973173",
+		"_collection_link": "https://crimson-sunset-723237.postman.co/workspace/New-Team-Workspace~4ed1f29e-3683-4f85-8088-ed690aa8a8f0/collection/19973173-46c26a2e-d4ff-4042-b667-e4b21d912637?action=share&source=collection_link&creator=19973173"
+	},
+	"item": [
+		{
+			"name": "get-produto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Novo Produto\",\r\n    \"estrelas\": 3,\r\n    \"categoria\": \"\",\r\n    \"qtdEstoque\": 50,\r\n    \"dataCompraProduto\": \"2024-04-14\",\r\n    \"valorProduto\": 99.99\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-produto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Produto Atualizado\",\r\n    \"estrelas\": 4,\r\n    \"categoria\": \"Tecnologia\",\r\n    \"qtdEstoque\": 75,\r\n    \"dataCompraProduto\": \"2024-04-14\",\r\n    \"valorProduto\": 129.99\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-produto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProdutoByCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/categoria/{categoria}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"categoria",
+						"{categoria}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProdutoByStar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/estrelas/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"estrelas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
