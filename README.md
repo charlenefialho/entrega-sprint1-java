@@ -12,10 +12,12 @@ Para rodar a aplicação localmente, siga os passos abaixo:
 Aqui estão os diagramas do projeto:
 
 ### Diagrama de Classes
-![Diagrama de Arquitetura](link-para-imagem-diagrama-arquitetura)
+![Diagrama de Arquitetura](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/DiagramaDeClasses.png)
 
-### Diagrama de Banco de Dados
-![Diagrama de Banco de Dados](link-para-imagem-diagrama-banco-de-dados)
+### Diagrama de MER/DER
+![Diagrama Conceitual](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/modelo_conceitual.png)
+
+![Diagrama lógico](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/diagramalogico2.png)
 
 ## Proposta Tecnológica e Problemas a serem Resolvidos
 
@@ -30,6 +32,10 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
 - **Personalização da Experiência do Cliente**: Ao entender as preferências dos clientes com base nos produtos mais vendidos e suas categorias, é possível personalizar ofertas e recomendações, criando uma experiência de compra mais relevante e atraente.
 
 > OBS:Essa é resolução de um problema básico, pois ainda nessa primeira sprint estamos em processo de exploração de uma solução mais concreta em que confirmaremos nossas dúvidas na mentoria que virá ter.
+
+### arquivo dos postman exportado
+
+[Download do Arquivo](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/api-java-leadtech.postman_collection.json)
 
 ## Documentação da API
 
