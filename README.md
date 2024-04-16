@@ -83,7 +83,7 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
 > 
 > Fabricio responsável pela entrega de BD.
 > 
-> Lucca responsável pela entrega de Devops e QA
+> Lucca responsável pela entrega de Devops, QA e .NET
 > 
 > Laís responsável pela entrega de IA.
 <table>
