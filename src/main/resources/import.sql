@@ -1,14 +1,17 @@
-INSERT INTO Fornecedor (idFornecedor, nomeFornecedor, tipoFornecedor) VALUES (1, 'TecnoCorp', 'Tecnologia');
-INSERT INTO Fornecedor (idFornecedor, nomeFornecedor, tipoFornecedor) VALUES (2, 'ModaStyle', 'Moda');
+-- Inserts para Fornecedor
+INSERT INTO fornecedor (nome_fornecedor, tipo_fornecedor) VALUES ('Fornecedor ABC Ltda.', 'Distribuidora de Eletrônicos');
+INSERT INTO fornecedor (nome_fornecedor, tipo_fornecedor) VALUES ('Fornecedor XYZ S/A', 'Fabricante de Vestuário');
 
-INSERT INTO LocalizacaoGeografica (idLocalizacao, pais, estado, cidade, cep) VALUES (201, 'Brasil', 'São Paulo', 'São Paulo', '01000-000');
-INSERT INTO LocalizacaoGeografica (idLocalizacao, pais, estado, cidade, cep) VALUES (202, 'Brasil', 'Rio de Janeiro', 'Rio de Janeiro', '20000-000');
+-- Inserts para LocalizacaoGeografica
+INSERT INTO localizacao_geografica (pais, estado, cidade, cep) VALUES ('Brasil', 'São Paulo', 'São Paulo', '01000-000');
 
-INSERT INTO Lead (idLead, canalOrigem, categoriaProdutoInteresse) VALUES (1, 'Site', 'Eletrônicos');
-INSERT INTO Lead (idLead, canalOrigem, categoriaProdutoInteresse) VALUES (2, 'Redes Sociais', 'Moda');
+-- Inserts para Lead
+INSERT INTO lead (canal_origem, categoria_produto_interesse) VALUES ('Redes Sociais', 'Eletrônicos');
 
-INSERT INTO Cliente (idCliente, idLead, nome, telefone, email, idade, genero, estadoCivil, idLocalizacao, nivelRenda, nivelEducacao, formaPagamentoPref) VALUES (101, 1, 'Ana', '123456789', 'ana@example.com', 30, 'Feminino', 'Solteiro(a)', 201, 5000.00, 'Graduação', 'Cartão de Crédito');
-INSERT INTO Cliente (idCliente, idLead, nome, telefone, email, idade, genero, estadoCivil, idLocalizacao, nivelRenda, nivelEducacao, formaPagamentoPref) VALUES (102, 2, 'João', '987654321', 'joao@example.com', 35, 'Masculino', 'Casado(a)', 202, 6000.00, 'Pós-Graduação', 'Boleto Bancário');
+-- Inserts para Produto
+INSERT INTO produto (nome_produto, estrelas, categoria_produto, qtd_estoque, data_compra_produto, valor_produto, id_fornecedor) VALUES ('Smartphone ABC', 4, 'Telefonia', 50, CURRENT_TIMESTAMP, 1500.00, 1);
+INSERT INTO produto (nome_produto, estrelas, categoria_produto, qtd_estoque, data_compra_produto, valor_produto, id_fornecedor) VALUES ('Camiseta XYZ', 5, 'Vestuário', 100, CURRENT_TIMESTAMP, 50.00, 2);
 
-INSERT INTO Produto (idProduto, idFornecedor, nomeProduto, estrelas, categoriaProduto, qtdEstoque, dataCompraProduto, valorProduto) VALUES (301, 1, 'Smartphone', 4, 'Tecnologia', 100, TO_DATE('2023-01-01', 'YYYY-MM-DD'), 1500.00);
-INSERT INTO Produto (idProduto, idFornecedor, nomeProduto, estrelas, categoriaProduto, qtdEstoque, dataCompraProduto, valorProduto) VALUES (302, 2, 'Camisa Polo', 5, 'Moda', 200, TO_DATE('2023-02-01', 'YYYY-MM-DD'), 100.00);
+
+-- Inserts para Cliente
+INSERT INTO cliente (nome, telefone, email, idade, genero, estado_civil, nivel_renda, nivel_educacao, forma_pagamento_pref,id_localizacao,id_lead) VALUES ('João Silva', '+55 11 91234-5678', 'joao.silva@example.com', 35, 'Masculino', 'Casado', 7000, 'Pós-graduação', 'Cartão de Crédito', 1, 1);

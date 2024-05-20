@@ -34,7 +34,7 @@ public class Produto {
 	@Column(nullable = false)
 	private Date dataCompraProduto;
 
-	@Column(nullable = false)
+	@Column(nullable = false, name = "valorProduto")
 	private double valorProduto;
 
 	@ManyToOne(fetch = FetchType.LAZY)
