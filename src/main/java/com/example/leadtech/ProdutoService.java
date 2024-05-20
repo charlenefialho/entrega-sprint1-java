@@ -1,5 +1,6 @@
 package com.example.leadtech;
 
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,6 +19,13 @@ public class ProdutoService {
     @Autowired
     public ProdutoService(ProdutoRepository produtoRepository) {
         this.produtoRepository = produtoRepository;
+    }
+    
+    public List<ProdutoDTO> getAllProdutos() {
+        List<Produto> produtos = produtoRepository.findAll();
+        return produtos.stream()
+                       .map(this::mapToDTO)
+                       .collect(Collectors.toList());
     }
 
     public ProdutoDTO criarProduto(ProdutoDTO produtoDTO) {
@@ -74,12 +82,42 @@ public class ProdutoService {
                        .collect(Collectors.toList());
     }
     
-    public List<ProdutoDTO> getAllProdutos() {
-        List<Produto> produtos = produtoRepository.findAll();
+    public List<ProdutoDTO> getProdutosPorData(Date dataInicial, Date dataFinal) {
+        List<Produto> produtos = produtoRepository.findByDataCompraProdutoBetween(dataInicial, dataFinal);
         return produtos.stream()
                        .map(this::mapToDTO)
                        .collect(Collectors.toList());
     }
+
+    public List<ProdutoDTO> getProdutosPorPreco(double valorMinimo, double valorMaximo) {
+        List<Produto> produtos = produtoRepository.findByValorProdutoBetween(valorMinimo, valorMaximo);
+        return produtos.stream()
+                       .map(this::mapToDTO)
+                       .collect(Collectors.toList());
+    }
+
+    public List<ProdutoDTO> getProdutosDisponiveis(int quantidadeMinima) {
+        List<Produto> produtos = produtoRepository.findByQtdEstoqueGreaterThan(quantidadeMinima);
+        return produtos.stream()
+                       .map(this::mapToDTO)
+                       .collect(Collectors.toList());
+    }
+
+    public List<ProdutoDTO> getProdutosPorPalavraChave(String palavraChave) {
+        List<Produto> produtos = produtoRepository.findByNomeProdutoContainingIgnoreCase(palavraChave);
+        return produtos.stream()
+                       .map(this::mapToDTO)
+                       .collect(Collectors.toList());
+    }
+    
+    public List<ProdutoDTO> getProdutosPorPalavraChaveEEstrelas(String palavraChave, int estrelas) {
+        List<Produto> produtos = produtoRepository.findByNomeProdutoContainingIgnoreCaseAndEstrelas(palavraChave, estrelas);
+        return produtos.stream()
+                       .map(this::mapToDTO)
+                       .collect(Collectors.toList());
+    }
+    
+    
 
     // Métodos auxiliares para mapear entre DTO e entidade
     private Produto mapToEntity(ProdutoDTO produtoDTO) {

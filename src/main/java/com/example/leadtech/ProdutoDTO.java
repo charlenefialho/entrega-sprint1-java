@@ -1,9 +1,12 @@
 package com.example.leadtech;
 import java.util.Date;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Positive;
 
 
 public class ProdutoDTO {
@@ -33,10 +36,14 @@ public class ProdutoDTO {
     @NotNull(message = "A categoria do produto é obrigatória")
     private String categoria;
     
+    @Min(value = 0, message = "O campo 'estrelas' não pode ser negativo")
+    @Max(value = 5, message = "O campo 'estrelas' não pode ser maior que 5")
     private int estrelas;
     
+    @Positive(message = "A quantidade em estoque deve ser um número positivo")
     private int qtdEstoque;
     
+    @Past(message = "A data de compra deve ser uma data no passado ou presente")
     private Date dataCompra;
     
     @NotNull(message = "O valor do produto é obrigatório")
