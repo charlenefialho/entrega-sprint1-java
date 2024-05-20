@@ -36,6 +36,10 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
 [Download do Arquivo](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/api-java-leadtech.postman_collection.json)
 
 ## Documentação da API
+> [!NOTE]  
+> Necessário estar com a aplicação rodando localmente.
+
+[Link da documentação no swagger](http://localhost:8080/swagger-ui/index.html)
 
 ### Endpoint: Criar Produto
 - Método: POST
@@ -72,6 +76,7 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
 ### Filtragem de Produtos
 
 - **GET api/produtos/categoria/{categoria}**: Filtra os produtos por categoria.
+- **GET /api/api/produtos/estrelas/{numero de estrelas}**: Filtra os produtos por classificação de estrelas.
 - **GET /api/api/produtos/estrelas/{numero de estrelas}**: Filtra os produtos por classificação de estrelas.
 
 ### Integrantes do grupo
