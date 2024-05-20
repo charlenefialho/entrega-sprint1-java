@@ -37,7 +37,7 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
 
 ## Documentação da API
 > [!NOTE]  
-> Necessário estar com a aplicação rodando localmente.
+> Necessário estar com a aplicação rodando localmente, para acessar a documentação.
 
 [Link da documentação no swagger](http://localhost:8080/swagger-ui/index.html)
 
@@ -76,8 +76,12 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
 ### Filtragem de Produtos
 
 - **GET api/produtos/categoria/{categoria}**: Filtra os produtos por categoria.
-- **GET /api/api/produtos/estrelas/{numero de estrelas}**: Filtra os produtos por classificação de estrelas.
-- **GET /api/api/produtos/estrelas/{numero de estrelas}**: Filtra os produtos por classificação de estrelas.
+- **GET /api/produtos/estrelas/{numero de estrelas}**: Filtra os produtos por classificação de estrelas.
+- **GET /api/produtos/data?dataInicial=YYYY-MM-dd&dataFinal=YYYY-MM-dd}**: Filtra os produtos por intervalo de datas.
+- **GET /api/produtos/preco?valorMinimo={valor}&valorMaximo={valor}**: Filtra os produtos por intervalo de preços.
+- **GET /api/produtos/disponiveis?quantidadeMinima={qtd do estoque}**: Filtra os produtos por disponíveis em estoque acima de uma quantidade mínima
+- **GET /api/produtos/buscar?palavraChave={palavra}**:  filtra os produtos por palavra-chave no nome
+- **GET /api/produtos/buscarPorPalavraChaveEEstrelas?palavraChave={palavra}&estrelas={qtd de estrelas}**: filtra produtos por palavra-chave no nome e por quantidade de estrelas
 
 ### Integrantes do grupo
 > Charlene reponsável por toda a criação da API.
