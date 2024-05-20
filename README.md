@@ -32,7 +32,7 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
 - **Personalização da Experiência do Cliente**: Ao entender as preferências dos clientes com base nos produtos mais vendidos e suas categorias, é possível personalizar ofertas e recomendações, criando uma experiência de compra mais relevante e atraente.
 
 ### Link do vídeo de explicação da aplicação
-[Link do vídeo](https://www.youtube.com/watch?v=e0d86EHisuA)
+[Link do vídeo](https://www.youtube.com/watch?v=Vchgqtv1Jxs)
 
 ### arquivo dos postman exportado
 
