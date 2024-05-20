@@ -13,7 +13,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/produtos/{id}",
+					"raw": "http://localhost:8080/api/produtos/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -22,7 +22,7 @@
 					"path": [
 						"api",
 						"produtos",
-						"{id}"
+						"1"
 					]
 				}
 			},
@@ -35,7 +35,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\": \"Novo Produto\",\r\n    \"estrelas\": 3,\r\n    \"categoria\": \"\",\r\n    \"qtdEstoque\": 50,\r\n    \"dataCompraProduto\": \"2024-04-14\",\r\n    \"valorProduto\": 99.99\r\n}\r\n",
+					"raw": "{\r\n  \"nome\": \"camiseta Teste 3\",\r\n  \"categoria\": \"Categoria de Teste 3\",\r\n  \"estrelas\": 4,\r\n  \"qtdEstoque\": 120,\r\n  \"dataCompra\": \"2024-01-10\",\r\n  \"valor\": 80.00\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -64,7 +64,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\": \"Produto Atualizado\",\r\n    \"estrelas\": 4,\r\n    \"categoria\": \"Tecnologia\",\r\n    \"qtdEstoque\": 75,\r\n    \"dataCompraProduto\": \"2024-04-14\",\r\n    \"valorProduto\": 129.99\r\n}\r\n",
+					"raw": "{\r\n  \"nome\": \"Novo Nome do Produto\",\r\n  \"categoria\": \"Nova Categoria\",\r\n  \"estrelas\": 5,\r\n  \"qtdEstoque\": 150,\r\n  \"dataCompra\": \"2023-01-15\",\r\n  \"valor\": 75.50\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -72,7 +72,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/produtos/{id}",
+					"raw": "http://localhost:8080/api/produtos/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -81,7 +81,7 @@
 					"path": [
 						"api",
 						"produtos",
-						"{id}"
+						"1"
 					]
 				}
 			},
@@ -92,8 +92,17 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/api/produtos/{id}",
+					"raw": "http://localhost:8080/api/produtos/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -102,19 +111,19 @@
 					"path": [
 						"api",
 						"produtos",
-						"{id}"
+						"4"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "getProdutoByCategory",
+			"name": "get-produto-by-category",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/produtos/categoria/{categoria}",
+					"raw": "http://localhost:8080/api/produtos/categoria/Telefonia",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -124,14 +133,14 @@
 						"api",
 						"produtos",
 						"categoria",
-						"{categoria}"
+						"Telefonia"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "getProdutoByStar",
+			"name": "get-produto-by-star",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -147,6 +156,174 @@
 						"produtos",
 						"estrelas",
 						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-between-date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/data?dataInicial=2023-01-01&dataFinal=2024-01-01\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"data"
+					],
+					"query": [
+						{
+							"key": "dataInicial",
+							"value": "2023-01-01"
+						},
+						{
+							"key": "dataFinal",
+							"value": "2024-01-01\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-between-value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/preco?valorMinimo=50.00&valorMaximo=1500.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"preco"
+					],
+					"query": [
+						{
+							"key": "valorMinimo",
+							"value": "50.00"
+						},
+						{
+							"key": "valorMaximo",
+							"value": "1500.00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-available-stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/disponiveis?quantidadeMinima=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"disponiveis"
+					],
+					"query": [
+						{
+							"key": "quantidadeMinima",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-by-key-word",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/buscar?palavraChave=camiseta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "palavraChave",
+							"value": "camiseta"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-by-key-word-by-stars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/buscarPorPalavraChaveEEstrelas?palavraChave=camiseta&estrelas=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"buscarPorPalavraChaveEEstrelas"
+					],
+					"query": [
+						{
+							"key": "palavraChave",
+							"value": "camiseta"
+						},
+						{
+							"key": "estrelas",
+							"value": "4"
+						}
 					]
 				}
 			},
