@@ -12,7 +12,7 @@ Para rodar a aplicação localmente, siga os passos abaixo:
 Aqui estão os diagramas do projeto:
 
 ### Diagrama de Classes
-![Diagrama de Arquitetura](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/DiagramaDeClasses.png)
+![Diagrama de Arquitetura](https://github.com/charlenefialho/entrega-sprint1-java/assets/94643076/f5bc0225-9ae3-4de6-b506-609a2425f708)
 
 ### Diagrama de MER/DER
 ![Diagrama Conceitual](https://github.com/charlenefialho/entrega-sprint1-java/blob/main/arquivosreadme/diagramaconceitual.png)
