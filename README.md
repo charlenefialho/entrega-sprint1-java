@@ -44,26 +44,26 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
 - Corpo da Requisição:
   ```json
   {
-    "nome": "Nome do Produto",
-    "categoria": "Categoria do Produto",
-    "estrelas": 5,
-    "qtdEstoque": 100,
-    "dataCompra": "2024-04-20",
-    "valor": 100.00
-  }
+  "nome": "Produto de Teste novo",
+  "categoria": "Categoria de Teste",
+  "estrelas": 4,
+  "qtdEstoque": 100,
+  "dataCompra": "2022-05-20",
+  "valor": 50.00
+}
 ``
 - **GET /api/produtos/{id}**: Obtém os detalhes de um produto específico pelo seu ID.
 ### Endpoint: atualizar Produto
 - **PUT /api/produtos/{id}**: Atualiza as informações de um produto existente.
 ```json
   {
-    "nome": "Nome do Produto",
-    "categoria": "Categoria do Produto",
-    "estrelas": 4,
-    "qtdEstoque": 100,
-    "dataCompra": "2024-04-14",
-    "valor": 99.99
-  }
+  "nome": "Novo Nome do Produto",
+  "categoria": "Nova Categoria",
+  "estrelas": 5,
+  "qtdEstoque": 150,
+  "dataCompra": "2023-01-15",
+  "valor": 75.50
+}
 ```
 
 - **DELETE /api/produtos/{id}**: Exclui um produto do sistema.
@@ -71,8 +71,8 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
 
 ### Filtragem de Produtos
 
-- **GET /api/produtos?categoria={categoria}**: Filtra os produtos por categoria.
-- **GET /api/produtos?estrelas={estrelas}**: Filtra os produtos por classificação de estrelas.
+- **GET api/produtos/categoria/{categoria}**: Filtra os produtos por categoria.
+- **GET /api/api/produtos/estrelas/{numero de estrelas}**: Filtra os produtos por classificação de estrelas.
 
 ### Integrantes do grupo
 > Charlene reponsável por toda a criação da API.
