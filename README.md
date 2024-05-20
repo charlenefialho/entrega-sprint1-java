@@ -54,8 +54,9 @@ Esta aplicação visa fornecer uma solução abrangente para o gerenciamento efi
   "qtdEstoque": 100,
   "dataCompra": "2022-05-20",
   "valor": 50.00
-}
+  }
 ``
+
 - **GET /api/produtos/{id}**: Obtém os detalhes de um produto específico pelo seu ID.
 ### Endpoint: atualizar Produto
 - **PUT /api/produtos/{id}**: Atualiza as informações de um produto existente.
